@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #1b3a2d;
+  --color-primary-light: #2a5c47;
+  --color-accent: #4dbfaa;
+  --color-accent-hover: #3da898;
+  --color-dark: #111827;
+  --color-surface: #f9f7f4;
+  --color-surface-alt: #f0efec;
+  --color-muted: #6b7280;
+  --color-danger: #dc2626;
+  --color-warning: #f59e0b;
+  --color-success: #16a34a;
+  --color-white: #ffffff;
+  --color-border: #e5e7eb;
+}
