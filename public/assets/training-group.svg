@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Training group illustration</title>
+  <desc id="desc">Stylised group training illustration with coach and children.</desc>
+  <rect width="1600" height="900" fill="#F0EFEC"/>
+  <rect y="540" width="1600" height="360" fill="#2A5C47"/>
+  <circle cx="340" cy="340" r="70" fill="#1B3A2D"/>
+  <circle cx="560" cy="300" r="70" fill="#1B3A2D"/>
+  <circle cx="780" cy="360" r="70" fill="#1B3A2D"/>
+  <circle cx="1000" cy="310" r="70" fill="#1B3A2D"/>
+  <circle cx="1220" cy="350" r="70" fill="#1B3A2D"/>
+  <path d="M250 860V500H430V860M470 860V460H650V860M690 860V520H870V860M910 860V470H1090V860M1130 860V510H1310V860" fill="#111827"/>
+  <circle cx="1420" cy="180" r="82" fill="#4DBFAA" opacity="0.65"/>
+</svg>

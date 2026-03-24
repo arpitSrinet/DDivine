@@ -809,7 +809,7 @@ Never:
 - Hardcode route strings
 - Hardcode query keys
 - Hardcode user-facing strings after Phase 2
-- Use `console.log` after Phase 6 logger is introduced
+- Use `console.log` only before Phase 6; from Phase 6 onward, use `logger.*` only
 
 ---
 
@@ -1161,7 +1161,7 @@ Before calling anything production-ready:
 - dashboard routes guarded
 - public pages have SEO metadata
 - all page routes lazy-loaded
-- no raw `console.log` after Phase 6
+- `console.log` used only before Phase 6; `logger.*` only from Phase 6 onward
 - no deep imports bypassing barrels
 
 ---

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hero sports illustration</title>
+  <desc id="desc">Stylised sports coaching background with a pitch and players.</desc>
+  <rect width="1600" height="900" fill="#1B3A2D"/>
+  <rect y="520" width="1600" height="380" fill="#2A5C47"/>
+  <circle cx="1180" cy="190" r="96" fill="#4DBFAA" opacity="0.7"/>
+  <circle cx="1360" cy="120" r="40" fill="#F9F7F4" opacity="0.45"/>
+  <path d="M180 620C420 430 690 420 930 620" fill="none" stroke="#F9F7F4" stroke-width="18" opacity="0.5"/>
+  <path d="M340 900V650C340 594 382 548 438 548S536 594 536 650V900Z" fill="#111827"/>
+  <circle cx="438" cy="500" r="52" fill="#F0EFEC"/>
+  <path d="M860 900V604C860 546 904 500 962 500S1064 546 1064 604V900Z" fill="#111827"/>
+  <circle cx="962" cy="454" r="50" fill="#F0EFEC"/>
+  <circle cx="1234" cy="720" r="68" fill="#FFFFFF"/>
+  <path d="M1190 688L1278 752M1278 688L1190 752M1234 652V788M1166 720H1302" stroke="#1B3A2D" stroke-width="16"/>
+</svg>

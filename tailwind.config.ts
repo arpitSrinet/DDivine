@@ -25,6 +25,8 @@ const config: Config = {
         border: 'var(--color-border)',
       },
       fontFamily: {
+        display: ['Teko', 'sans-serif'],
+        copy: ['Ubuntu', 'sans-serif'],
         heading: ['Oswald', 'sans-serif'],
         body: ['"DM Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],

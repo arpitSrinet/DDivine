@@ -1,0 +1,1 @@
+Static marketing assets for the public site live in this folder.

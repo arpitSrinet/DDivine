@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Wraparound care illustration</title>
+  <desc id="desc">Stylised childcare scene with a school building and children.</desc>
+  <rect width="1600" height="900" fill="#F0EFEC"/>
+  <rect y="560" width="1600" height="340" fill="#4DBFAA"/>
+  <rect x="240" y="180" width="420" height="340" rx="28" fill="#FFFFFF"/>
+  <rect x="300" y="250" width="120" height="120" fill="#F9F7F4"/>
+  <rect x="474" y="250" width="120" height="120" fill="#F9F7F4"/>
+  <rect x="408" y="392" width="84" height="128" fill="#1B3A2D"/>
+  <circle cx="940" cy="470" r="58" fill="#1B3A2D"/>
+  <path d="M850 810C850 700 936 614 1046 614H1064C1174 614 1260 700 1260 810V860H850Z" fill="#111827"/>
+  <circle cx="1240" cy="520" r="44" fill="#1B3A2D"/>
+  <path d="M1170 824C1170 736 1238 668 1326 668H1338C1426 668 1494 736 1494 824V860H1170Z" fill="#111827"/>
+</svg>

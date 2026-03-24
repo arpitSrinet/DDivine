@@ -14,12 +14,15 @@
     "validate": "npm run typecheck && npm run lint && npm run test:run"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.21",
+    "axios": "^1.13.6",
     "framer-motion": "^11.11.17",
     "react": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.28.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

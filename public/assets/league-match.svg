@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">League match illustration</title>
+  <desc id="desc">Stylised school football league match scene.</desc>
+  <rect width="1600" height="900" fill="#111827"/>
+  <rect y="500" width="1600" height="400" fill="#2A5C47"/>
+  <rect x="180" y="240" width="1240" height="360" rx="40" fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.75"/>
+  <rect x="180" y="350" width="180" height="140" fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.75"/>
+  <rect x="1240" y="350" width="180" height="140" fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.75"/>
+  <circle cx="800" cy="420" r="110" fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.75"/>
+  <circle cx="520" cy="650" r="46" fill="#F9F7F4"/>
+  <circle cx="780" cy="720" r="46" fill="#F9F7F4"/>
+  <circle cx="1030" cy="648" r="46" fill="#F9F7F4"/>
+  <circle cx="1290" cy="714" r="46" fill="#F9F7F4"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Coaching session illustration</title>
+  <desc id="desc">Stylised football coaching session with cones and children.</desc>
+  <rect width="1600" height="900" fill="#F9F7F4"/>
+  <rect y="500" width="1600" height="400" fill="#4DBFAA"/>
+  <rect x="120" y="140" width="520" height="420" rx="36" fill="#1B3A2D"/>
+  <circle cx="360" cy="280" r="74" fill="#FFFFFF"/>
+  <path d="M250 520C250 430 320 360 410 360H430C520 360 590 430 590 520V560H250Z" fill="#2A5C47"/>
+  <circle cx="920" cy="350" r="56" fill="#2A5C47"/>
+  <path d="M840 650C840 560 910 490 1000 490H1014C1104 490 1174 560 1174 650V740H840Z" fill="#1B3A2D"/>
+  <circle cx="1260" cy="420" r="44" fill="#2A5C47"/>
+  <path d="M1200 700C1200 620 1260 560 1340 560H1348C1428 560 1488 620 1488 700V760H1200Z" fill="#1B3A2D"/>
+  <circle cx="1180" cy="720" r="14" fill="#F59E0B"/>
+  <circle cx="1320" cy="680" r="14" fill="#F59E0B"/>
+  <circle cx="148" cy="760" r="16" fill="#F59E0B"/>
+</svg>

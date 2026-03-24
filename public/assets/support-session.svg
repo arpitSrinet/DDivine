@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Support session illustration</title>
+  <desc id="desc">Stylised calm support session with coach and child.</desc>
+  <rect width="1600" height="900" fill="#F9F7F4"/>
+  <rect y="580" width="1600" height="320" fill="#1B3A2D"/>
+  <circle cx="420" cy="250" r="110" fill="#4DBFAA" opacity="0.45"/>
+  <circle cx="620" cy="180" r="56" fill="#4DBFAA" opacity="0.3"/>
+  <circle cx="760" cy="430" r="72" fill="#2A5C47"/>
+  <path d="M650 860C650 724 756 618 892 618H912C1048 618 1154 724 1154 860Z" fill="#111827"/>
+  <circle cx="1120" cy="520" r="52" fill="#2A5C47"/>
+  <path d="M1040 860C1040 764 1114 690 1210 690H1222C1318 690 1392 764 1392 860Z" fill="#111827"/>
+  <circle cx="320" cy="610" r="38" fill="#FFFFFF"/>
+  <circle cx="352" cy="590" r="22" fill="#FFFFFF"/>
+</svg>

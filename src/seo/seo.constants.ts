@@ -1,88 +1,88 @@
 /**
  * @file seo.constants.ts
- * @description Static SEO metadata for all Phase 4 route stubs.
+ * @description Static SEO metadata for the public marketing site and supporting shells.
  * @module src/seo/seo.constants
  */
 export const SEO_META = {
   home: {
     title: 'Sports Coaching & Wrap Around Childcare',
     description:
-      'Phase 4 routing stub for the DDivine Training home page shell.',
+      'Fun, inclusive sports coaching and wrap around childcare for schools, parents, and children aged 5 to 14.',
   },
   about: {
     title: 'About Us',
-    description: 'Phase 4 routing stub for the DDivine Training about page.',
+    description: 'Learn how DDivine Training supports schools and families through coaching, childcare, and inclusive delivery.',
   },
   services: {
     title: 'Our Services',
     description:
-      'Phase 4 routing stub for the DDivine Training services overview page.',
+      'Explore DDivine services including PE teaching, extra curricular clubs, holiday camps, and wraparound childcare.',
   },
   policies: {
     title: 'Our Policies',
     description:
-      'Phase 4 routing stub for the DDivine Training policies page.',
+      'Review the policy principles that guide safeguarding, behaviour, attendance, and communication across DDivine services.',
   },
   events: {
     title: 'Upcoming Events',
     description:
-      'Phase 4 routing stub for the DDivine Training events page.',
+      'Preview upcoming DDivine events, open sessions, and school partnership opportunities.',
   },
   curricular: {
     title: 'Curricular Activities',
     description:
-      'Phase 4 routing stub for the curricular activities service page.',
+      'Curricular PE support for schools that want structured, energetic delivery and confident participation.',
   },
   extraCurricular: {
     title: 'Extra Curricular Activities',
     description:
-      'Phase 4 routing stub for the extra curricular activities service page.',
+      'After-school sports clubs that build routine, teamwork, and enthusiasm for movement.',
   },
   holidayCamps: {
     title: 'Holiday Football Camps',
     description:
-      'Phase 4 routing stub for the holiday camps service page.',
+      'Holiday football camps that keep children active, social, and supported throughout the school break.',
   },
   wraparound: {
     title: 'Wraparound Childcare',
     description:
-      'Phase 4 routing stub for the wraparound childcare service page.',
+      'Dependable wraparound childcare built around safety, structure, and enjoyable active provision.',
   },
   knowledgeHub: {
     title: 'Knowledge Hub',
     description:
-      'Phase 4 routing stub for the DDivine Training knowledge hub page.',
+      'Browse DDivine case studies, free activities, and common questions for schools and families.',
   },
   caseStudies: {
     title: 'Case Studies',
     description:
-      'Phase 4 routing stub for the case studies page.',
+      'Read practical examples of how DDivine supports schools through coaching and childcare delivery.',
   },
   freeActivities: {
     title: 'Free Activities',
     description:
-      'Phase 4 routing stub for the free activities page.',
+      'Download activity ideas for children in key stage 1 and key stage 2.',
   },
   faqs: {
     title: 'Frequently Asked Questions',
-    description: 'Phase 4 routing stub for the FAQs page.',
+    description: 'Find answers to common questions about DDivine services, holiday camps, and wraparound childcare.',
   },
   league: {
     title: 'School Football League',
     description:
-      'Phase 4 routing stub for the school football league page.',
+      'Join the DDivine school football league and give pupils a structured, low-admin competition format.',
   },
   login: {
     title: 'Login',
-    description: 'Phase 4 routing stub for the login flow.',
+    description: 'Login flow for DDivine parent and school accounts.',
   },
   signup: {
     title: 'Sign Up',
-    description: 'Phase 4 routing stub for the signup flow.',
+    description: 'Signup flow for DDivine parent and school accounts.',
   },
   dashboard: {
     title: 'Dashboard',
-    description: 'Phase 4 routing stub for the protected dashboard shell.',
+    description: 'Protected dashboard shell for DDivine accounts.',
     noIndex: true,
   },
 } as const;

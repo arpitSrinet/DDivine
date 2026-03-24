@@ -10,3 +10,5 @@ export type {
   ISelectOption,
   IStatValue,
 } from './ui.types';
+export { ApiError, isApiError } from './api.types';
+export type { IApiErrorPayload, IApiFieldError } from './api.types';

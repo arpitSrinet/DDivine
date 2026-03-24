@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Holiday camp illustration</title>
+  <desc id="desc">Stylised holiday sports camp with children and goals.</desc>
+  <rect width="1600" height="900" fill="#F9F7F4"/>
+  <rect y="480" width="1600" height="420" fill="#2A5C47"/>
+  <circle cx="1260" cy="150" r="90" fill="#F59E0B" opacity="0.85"/>
+  <rect x="118" y="318" width="160" height="162" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+  <rect x="1320" y="318" width="160" height="162" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+  <circle cx="480" cy="600" r="44" fill="#111827"/>
+  <circle cx="670" cy="690" r="44" fill="#111827"/>
+  <circle cx="860" cy="620" r="44" fill="#111827"/>
+  <circle cx="1050" cy="700" r="44" fill="#111827"/>
+  <circle cx="1240" cy="610" r="44" fill="#111827"/>
+  <circle cx="480" cy="540" r="34" fill="#FFFFFF"/>
+  <circle cx="670" cy="630" r="34" fill="#FFFFFF"/>
+  <circle cx="860" cy="560" r="34" fill="#FFFFFF"/>
+  <circle cx="1050" cy="640" r="34" fill="#FFFFFF"/>
+  <circle cx="1240" cy="550" r="34" fill="#FFFFFF"/>
+</svg>

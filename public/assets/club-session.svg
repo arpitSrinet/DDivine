@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Club session illustration</title>
+  <desc id="desc">Stylised after-school sports club scene.</desc>
+  <rect width="1600" height="900" fill="#F0EFEC"/>
+  <rect y="560" width="1600" height="340" fill="#1B3A2D"/>
+  <rect x="140" y="120" width="1320" height="360" rx="44" fill="#FFFFFF"/>
+  <rect x="220" y="210" width="1160" height="180" rx="28" fill="#4DBFAA" opacity="0.35"/>
+  <circle cx="360" cy="620" r="54" fill="#FFFFFF"/>
+  <circle cx="620" cy="670" r="54" fill="#FFFFFF"/>
+  <circle cx="900" cy="630" r="54" fill="#FFFFFF"/>
+  <circle cx="1160" cy="680" r="54" fill="#FFFFFF"/>
+  <circle cx="1420" cy="640" r="54" fill="#FFFFFF"/>
+  <path d="M306 760V660H414V760M566 810V710H674V810M846 770V670H954V770M1106 820V720H1214V820M1366 780V680H1474V780" fill="#111827"/>
+</svg>

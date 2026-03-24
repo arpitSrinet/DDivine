@@ -8,6 +8,8 @@ import type { ReactNode } from 'react';
 import { COMMON_COPY } from '@/copy';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
 
+import { OfflineBanner } from './OfflineBanner';
+
 export interface IPageWrapperProps {
   children: ReactNode;
 }
@@ -23,7 +25,8 @@ export const PageWrapper = ({ children }: IPageWrapperProps) => {
       >
         {COMMON_COPY.layout.skipToContent}
       </a>
-      <main className="mx-auto min-h-[60vh] w-full max-w-content px-4 py-12 md:px-8" id="main-content" tabIndex={-1}>
+      <main className="mx-auto min-h-[60vh] w-full max-w-content space-y-4 px-4 py-12 md:px-8" id="main-content" tabIndex={-1}>
+        <OfflineBanner />
         {children}
       </main>
     </>
