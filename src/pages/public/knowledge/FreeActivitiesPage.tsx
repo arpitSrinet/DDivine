@@ -1,6 +1,6 @@
 /**
  * @file FreeActivitiesPage.tsx
- * @description Static free activities page for Phase 5.
+ * @description Free activities page with live downloads and Phase 6 runtime states.
  * @module src/pages/public/knowledge/FreeActivitiesPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

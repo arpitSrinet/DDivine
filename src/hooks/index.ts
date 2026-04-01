@@ -4,7 +4,12 @@
  * @module src/hooks
  */
 export { useCaseStudies } from './useCaseStudies';
+export { useChildren } from './useChildren';
+export { useMyBookings } from './useMyBookings';
+export { useProfile } from './useProfile';
 export { useFaqSections } from './useFaqSections';
+export { useFeatureFlag } from './useFeatureFlag';
+export { useFormPersistence } from './useFormPersistence';
 export { useFreeActivities } from './useFreeActivities';
 export { useKnowledgeHubSummary } from './useKnowledgeHubSummary';
 export { useLeagueTable } from './useLeagueTable';

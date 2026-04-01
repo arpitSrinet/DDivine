@@ -20,6 +20,32 @@ export const userService = {
       throw error;
     }
   },
+  createChild: async (payload: Record<string, unknown>) => {
+    try {
+      const response = await apiClient.post(API_ENDPOINTS.users.children, payload);
+      return parseSingleResponse('users.createChild', ChildSchema, response.data);
+    } catch (error) {
+      logger.error('Failed to create child profile', error instanceof Error ? error : undefined);
+      throw error;
+    }
+  },
+  updateChild: async (childId: string, payload: Record<string, unknown>) => {
+    try {
+      const response = await apiClient.patch(API_ENDPOINTS.users.child(childId), payload);
+      return parseSingleResponse('users.updateChild', ChildSchema, response.data);
+    } catch (error) {
+      logger.error('Failed to update child profile', error instanceof Error ? error : undefined, { childId });
+      throw error;
+    }
+  },
+  deleteChild: async (childId: string) => {
+    try {
+      await apiClient.delete(API_ENDPOINTS.users.child(childId));
+    } catch (error) {
+      logger.error('Failed to delete child profile', error instanceof Error ? error : undefined, { childId });
+      throw error;
+    }
+  },
   getProfile: async (signal?: AbortSignal) => {
     try {
       const response = await apiClient.get(API_ENDPOINTS.users.me, { signal });

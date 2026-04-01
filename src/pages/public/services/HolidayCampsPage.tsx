@@ -1,6 +1,6 @@
 /**
  * @file HolidayCampsPage.tsx
- * @description Static holiday football camps service page for Phase 5.
+ * @description Holiday camps page with live service detail data and Phase 6 runtime states.
  * @module src/pages/public/services/HolidayCampsPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

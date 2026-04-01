@@ -13,9 +13,15 @@ export const API_ENDPOINTS = {
   users: {
     me: '/users/me',
     children: '/users/me/children',
+    child: (childId: string) => `/users/me/children/${childId}`,
+  },
+  sessions: {
+    all: '/sessions',
+    detail: (sessionId: string) => `/sessions/${sessionId}`,
   },
   bookings: {
     mine: '/bookings/mine',
+    create: '/bookings',
     detail: (bookingId: string) => `/bookings/${bookingId}`,
   },
   services: {
@@ -39,6 +45,10 @@ export const API_ERROR_CODES = {
   EMAIL_ALREADY_EXISTS: 'EMAIL_ALREADY_EXISTS',
   BOOKING_NOT_FOUND: 'BOOKING_NOT_FOUND',
   BOOKING_ALREADY_CANCELLED: 'BOOKING_ALREADY_CANCELLED',
+  CAPACITY_EXCEEDED: 'CAPACITY_EXCEEDED',
+  AGE_INELIGIBLE: 'AGE_INELIGIBLE',
+  BOOKING_OVERLAP: 'BOOKING_OVERLAP',
+  EMERGENCY_CONTACT_REQUIRED: 'EMERGENCY_CONTACT_REQUIRED',
   VALIDATION_ERROR: 'VALIDATION_ERROR',
   RATE_LIMITED: 'RATE_LIMITED',
   SERVER_ERROR: 'SERVER_ERROR',

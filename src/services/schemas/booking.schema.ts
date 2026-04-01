@@ -7,7 +7,7 @@ import { z } from 'zod';
 
 export const BookingSchema = z.object({
   coachName: z.string().optional(),
-  date: z.string().datetime(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Expected ISO date YYYY-MM-DD'),
   id: z.string(),
   location: z.string(),
   price: z.number().nonnegative().optional(),

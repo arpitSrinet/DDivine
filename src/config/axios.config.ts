@@ -1,13 +1,15 @@
 /**
  * @file axios.config.ts
- * @description Shared Axios client configuration with Phase 6 error normalisation.
+ * @description Shared Axios client configuration with auth token injection,
+ *   Phase 6 error normalisation, and 401 session-clearing.
  * @module src/config/axios
  */
 import axios from 'axios';
 import type { AxiosError, RawAxiosResponseHeaders } from 'axios';
 
-import { API_ERROR_CODES } from '@/constants';
+import { API_ERROR_CODES, ROUTES } from '@/constants';
 import { logger } from '@/monitoring';
+import { useAuthStore } from '@/store';
 import { ApiError, type IApiErrorPayload } from '@/types';
 
 import { env } from './env.config';
@@ -70,6 +72,12 @@ export const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use((config) => {
+  const token = useAuthStore.getState().accessToken;
+
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+
   logger.debug('API request started', {
     method: config.method?.toUpperCase(),
     url: config.url,
@@ -88,6 +96,11 @@ apiClient.interceptors.response.use(
       status: normalizedError.status,
       url: error.config?.url,
     });
+
+    if (normalizedError.code === API_ERROR_CODES.TOKEN_EXPIRED) {
+      useAuthStore.getState().clearAuth();
+      window.location.replace(ROUTES.LOGIN);
+    }
 
     return Promise.reject(normalizedError);
   },

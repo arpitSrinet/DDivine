@@ -15,6 +15,10 @@ export const queryKeys = {
     session: () => ['auth', 'session'] as const,
     me: () => ['auth', 'me'] as const,
   },
+  users: {
+    profile: () => ['users', 'profile'] as const,
+    children: () => ['users', 'children'] as const,
+  },
   bookings: {
     all: () => ['bookings'] as const,
     mine: (params?: IPaginationParams) => ['bookings', 'mine', normalizePagination(params)] as const,

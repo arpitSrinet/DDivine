@@ -1,6 +1,6 @@
 /**
  * @file App.tsx
- * @description Application entry that renders the Phase 4 router provider.
+ * @description Application entry that renders the routed Phase 6 application shell.
  * @module src/App
  */
 import { RouterProvider } from 'react-router-dom';

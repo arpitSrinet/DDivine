@@ -11,6 +11,7 @@ export { FeatureGridSection, FeatureGridSectionEmpty, FeatureGridSectionSkeleton
 export { HeroSection } from './HeroSection';
 export { LeagueTablePreview, LeagueTablePreviewEmpty, LeagueTablePreviewSkeleton } from './LeagueTablePreview';
 export { MarketingCtaSection } from './MarketingCtaSection';
+export { MarketingBottomSection } from './MarketingBottomSection';
 export { PageHero } from './PageHero';
 export { PartnerLogos } from './PartnerLogos';
 export { PhotoStrip } from './PhotoStrip';

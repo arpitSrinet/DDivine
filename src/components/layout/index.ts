@@ -5,6 +5,8 @@
  */
 export { AuthLayout } from './AuthLayout';
 export { DashboardLayout } from './DashboardLayout';
+export { ParentDashboardLayout } from './ParentDashboardLayout';
+export type { TDashboardTab } from './ParentDashboardLayout';
 export { Footer } from './Footer';
 export { Navbar } from './Navbar';
 export { OfflineBanner } from './OfflineBanner';

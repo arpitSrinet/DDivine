@@ -1,6 +1,6 @@
 /**
  * @file ExtraCurricularPage.tsx
- * @description Static extra curricular activities service page for Phase 5.
+ * @description Extra curricular activities page with live service detail data and Phase 6 runtime states.
  * @module src/pages/public/services/ExtraCurricularPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

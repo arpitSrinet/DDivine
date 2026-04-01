@@ -1,6 +1,6 @@
 /**
  * @file CaseStudiesPage.tsx
- * @description Static case studies page for Phase 5.
+ * @description Case studies page with Phase 6 loading, empty, and error states.
  * @module src/pages/public/knowledge/CaseStudiesPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

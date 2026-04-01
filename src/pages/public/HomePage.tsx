@@ -6,9 +6,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { MarketingButton, MarketingFooter, MarketingHeader, marketingShellClassName } from '@/components/layout';
+import { MarketingButton, MarketingHeader, marketingShellClassName } from '@/components/layout';
 import { ROUTES, SERVICE_ROUTE_MAP } from '@/constants';
-import { MarketingCtaSection } from '@/components/sections';
+import { MarketingBottomSection } from '@/components/sections';
 import { HOME_STATS } from '@/constants/stats.constants';
 import { COMMON_COPY, HOME_COPY } from '@/copy';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
@@ -171,8 +171,8 @@ const HomePage = () => {
           />
           <div className="absolute inset-0 bg-[#09131d]/70" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#09131d]/90 via-[#09131d]/65 to-[#09131d]/35" />
-          <div className={`relative z-10 min-h-[46rem] ${shellClassName} lg:min-h-[50rem]`}>
-            <MarketingHeader contactHref="#home-cta" />
+          <div className={`relative z-10 min-h-[30rem] ${shellClassName} lg:h-[760px]`}>
+            <MarketingHeader contactHref={ROUTES.CONTACT} />
             <div className="grid gap-12 pb-16 pt-12 md:pb-24 md:pt-24 lg:min-h-[39rem] lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-end xl:grid-cols-[minmax(0,1fr)_26rem]">
               <div className="max-w-[41rem]">
                 <h1 className="font-display text-[3rem] uppercase leading-[0.88] tracking-[0.018em] text-white sm:text-[4.7rem] lg:text-[6.35rem]">
@@ -319,7 +319,7 @@ const HomePage = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <MarketingButton label={COMMON_COPY.actions.learnMore} to={ROUTES.SERVICES} />
-                  <MarketingButton href="#home-cta" label="Contact us" to={ROUTES.HOME} variant="outline-light" />
+                  <MarketingButton label="Contact us" to={ROUTES.CONTACT} variant="outline-light" />
                 </div>
               </div>
             </div>
@@ -513,17 +513,13 @@ const HomePage = () => {
           </div>
         </section>
 
-        <MarketingCtaSection
+        <MarketingBottomSection
           body={COMMON_COPY.ctaBanner.body}
-          childImageAlt={HOME_COPY.supportFamilies.imageAlt}
-          childImageSrc={HOME_COPY.supportFamilies.imageSrc}
           id="home-cta"
-          imageAlt={COMMON_COPY.ctaBanner.imageAlt}
-          imageSrc={COMMON_COPY.ctaBanner.imageSrc}
+          imageAlt="Child holding a football"
+          imageSrc="/assets/policy-cta-boy.png"
           title={COMMON_COPY.ctaBanner.title}
         />
-
-        <MarketingFooter contactHref="#home-cta" />
       </main>
     </>
   );

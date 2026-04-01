@@ -1,6 +1,6 @@
 /**
  * @file FAQsPage.tsx
- * @description Static FAQs page for Phase 5.
+ * @description FAQs page with live content loading and Phase 6 runtime states.
  * @module src/pages/public/knowledge/FAQsPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

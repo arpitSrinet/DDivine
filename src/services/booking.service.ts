@@ -11,6 +11,15 @@ import { apiClient } from '@/config';
 import { BookingSchema, parseCollectionResponse, parseSingleResponse } from './schemas';
 
 export const bookingService = {
+  createBooking: async (payload: { sessionId: string; childId?: string; idempotencyKey?: string }) => {
+    try {
+      const response = await apiClient.post(API_ENDPOINTS.bookings.create, payload);
+      return parseSingleResponse('bookings.create', BookingSchema, response.data);
+    } catch (error) {
+      logger.error('Failed to create booking', error instanceof Error ? error : undefined);
+      throw error;
+    }
+  },
   cancelBooking: async (bookingId: string) => {
     try {
       const response = await apiClient.delete(API_ENDPOINTS.bookings.detail(bookingId));

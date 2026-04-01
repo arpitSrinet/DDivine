@@ -1,6 +1,6 @@
 /**
  * @file WraparoundChildcarePage.tsx
- * @description Static wraparound childcare service page for Phase 5.
+ * @description Wraparound childcare page with live service detail data and Phase 6 runtime states.
  * @module src/pages/public/services/WraparoundChildcarePage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

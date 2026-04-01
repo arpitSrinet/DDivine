@@ -16,17 +16,26 @@ import { MarketingButton } from './MarketingButton';
 export const marketingShellClassName = 'mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-12';
 
 export interface IMarketingHeaderProps {
+  avatarAlt?: string;
+  avatarSrc?: string;
+  compact?: boolean;
   contactHref: string;
+  variant?: 'default' | 'logged-in';
 }
 
 export const MarketingHeader = ({
+  avatarAlt = 'Signed-in account avatar',
+  avatarSrc,
+  compact = false,
   contactHref,
+  variant = 'default',
 }: IMarketingHeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isLoggedInVariant = variant === 'logged-in';
 
   return (
     <>
-      <header className="flex items-center justify-between gap-6 py-3 md:py-5">
+      <header className={compact ? 'flex h-14 items-center justify-between gap-6' : 'flex h-16 items-center justify-between gap-6 md:h-20'}>
         <Link
           className="shrink-0 font-display text-[1.6rem] uppercase tracking-[0.14em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9ee4d2] focus-visible:ring-offset-2 focus-visible:ring-offset-[#09131d] sm:text-[1.8rem]"
           to={ROUTES.HOME}
@@ -44,10 +53,29 @@ export const MarketingHeader = ({
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
-          <MarketingButton label={COMMON_COPY.actions.signUp} to={ROUTES.SIGNUP} variant="outline-light" />
-          <MarketingButton label={COMMON_COPY.actions.enquire} to={ROUTES.SERVICES} />
-        </div>
+        {isLoggedInVariant ? (
+          <button
+            aria-label="Open profile menu"
+            className="hidden items-center gap-2 md:flex"
+            type="button"
+          >
+            <img
+              alt={avatarAlt}
+              className="h-12 w-12 rounded-full border border-black/10 object-cover"
+              src={avatarSrc ?? 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80'}
+            />
+            <span className="flex h-5 w-5 items-center justify-center text-white" aria-hidden="true">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+              </svg>
+            </span>
+          </button>
+        ) : (
+          <div className="hidden items-center gap-3 md:flex">
+            <MarketingButton label={COMMON_COPY.actions.signUp} to={ROUTES.SIGNUP} variant="outline-light" />
+            <MarketingButton label={COMMON_COPY.actions.enquire} to={ROUTES.SERVICES} />
+          </div>
+        )}
         <button
           aria-expanded={isMobileMenuOpen}
           aria-label={isMobileMenuOpen ? COMMON_COPY.layout.menuClose : COMMON_COPY.layout.menuOpen}
@@ -73,18 +101,20 @@ export const MarketingHeader = ({
                 {getNavigationLabel(item.id)}
               </Link>
             ))}
-            <a
+            <Link
               className="font-copy text-base text-white/90 transition hover:text-white"
-              href={contactHref}
               onClick={() => setIsMobileMenuOpen(false)}
+              to={contactHref}
             >
               Contact us
-            </a>
+            </Link>
           </nav>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <MarketingButton label={COMMON_COPY.actions.signUp} to={ROUTES.SIGNUP} variant="outline-light" />
-            <MarketingButton label={COMMON_COPY.actions.enquire} to={ROUTES.SERVICES} />
-          </div>
+          {!isLoggedInVariant ? (
+            <div className="mt-5 flex flex-wrap gap-3">
+              <MarketingButton label={COMMON_COPY.actions.signUp} to={ROUTES.SIGNUP} variant="outline-light" />
+              <MarketingButton label={COMMON_COPY.actions.enquire} to={ROUTES.SERVICES} />
+            </div>
+          ) : null}
         </div>
       ) : null}
       <OfflineBanner />

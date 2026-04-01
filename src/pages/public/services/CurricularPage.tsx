@@ -1,6 +1,6 @@
 /**
  * @file CurricularPage.tsx
- * @description Static curricular activities service page for Phase 5.
+ * @description Curricular activities page with live service detail data and Phase 6 runtime states.
  * @module src/pages/public/services/CurricularPage
  */
 import { Footer, Navbar, PageWrapper, SectionWrapper } from '@/components/layout';

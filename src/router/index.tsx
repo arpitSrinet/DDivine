@@ -4,7 +4,7 @@
  * @module src/router
  */
 import { Suspense, lazy } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { ROUTES } from '@/constants';
 import { COMMON_COPY } from '@/copy';
@@ -18,6 +18,7 @@ const HomePage = lazy(() => import('@/pages/public/HomePage'));
 const AboutUsPage = lazy(() => import('@/pages/public/AboutUsPage'));
 const OurServicesPage = lazy(() => import('@/pages/public/OurServicesPage'));
 const PoliciesPage = lazy(() => import('@/pages/public/PoliciesPage'));
+const ContactUsPage = lazy(() => import('@/pages/public/ContactUsPage'));
 const UpcomingEventsPage = lazy(() => import('@/pages/public/UpcomingEventsPage'));
 const CurricularPage = lazy(() => import('@/pages/public/services/CurricularPage'));
 const ExtraCurricularPage = lazy(() => import('@/pages/public/services/ExtraCurricularPage'));
@@ -30,7 +31,6 @@ const FAQsPage = lazy(() => import('@/pages/public/knowledge/FAQsPage'));
 const SchoolFootballLeaguePage = lazy(() => import('@/pages/public/SchoolFootballLeaguePage'));
 const LoginAskPage = lazy(() => import('@/pages/auth/LoginAskPage'));
 const LoginPage = lazy(() => import('@/pages/auth/LoginPage'));
-const SignUpAskPage = lazy(() => import('@/pages/auth/SignUpAskPage'));
 const SignUpParentPage = lazy(() => import('@/pages/auth/SignUpParentPage'));
 const SignUpSchoolPage = lazy(() => import('@/pages/auth/SignUpSchoolPage'));
 const ProfilePage = lazy(() => import('@/pages/dashboard/ProfilePage'));
@@ -59,6 +59,7 @@ export const router = createBrowserRouter([
   { path: ROUTES.ABOUT, element: renderLazyPage(AboutUsPage), errorElement: routeErrorElement },
   { path: ROUTES.SERVICES, element: renderLazyPage(OurServicesPage), errorElement: routeErrorElement },
   { path: ROUTES.POLICIES, element: renderLazyPage(PoliciesPage), errorElement: routeErrorElement },
+  { path: ROUTES.CONTACT, element: renderLazyPage(ContactUsPage), errorElement: routeErrorElement },
   {
     path: ROUTES.UPCOMING_EVENTS,
     element: renderLazyPage(UpcomingEventsPage),
@@ -112,7 +113,7 @@ export const router = createBrowserRouter([
       { path: ROUTES.LOGIN, element: renderLazyPage(LoginAskPage) },
       { path: ROUTES.LOGIN_PARENT, element: renderLazyPage(LoginPage) },
       { path: ROUTES.LOGIN_SCHOOL, element: renderLazyPage(LoginPage) },
-      { path: ROUTES.SIGNUP, element: renderLazyPage(SignUpAskPage) },
+      { path: ROUTES.SIGNUP, element: <Navigate replace to={ROUTES.LOGIN} /> },
       { path: ROUTES.SIGNUP_PARENT, element: renderLazyPage(SignUpParentPage) },
       { path: ROUTES.SIGNUP_SCHOOL, element: renderLazyPage(SignUpSchoolPage) },
     ],

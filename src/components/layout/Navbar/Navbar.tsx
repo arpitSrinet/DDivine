@@ -1,30 +1,39 @@
 /**
  * @file Navbar.tsx
- * @description Responsive application header with desktop navigation and a mobile menu toggle.
+ * @description Responsive application header backed by shared UI store state for the mobile menu.
  * @module src/components/layout/Navbar/Navbar
  */
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ROUTES } from '@/constants';
 import { COMMON_COPY } from '@/copy';
+import { useUiStore } from '@/store';
 
 import { NavbarAuthButtons } from './NavbarAuthButtons';
 import { NavbarDesktop } from './NavbarDesktop';
 import { NavbarMobile } from './NavbarMobile';
 
 export const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isMobileMenuOpen = useUiStore((state) => state.isSidebarOpen);
+  const setSidebarOpen = useUiStore((state) => state.setSidebarOpen);
+  const location = useLocation();
+
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname, setSidebarOpen]);
+
   const toggleMobileMenu = (): void => {
-    setIsMobileMenuOpen((currentValue) => !currentValue);
+    setSidebarOpen(!isMobileMenuOpen);
   };
+
   const closeMobileMenu = (): void => {
-    setIsMobileMenuOpen(false);
+    setSidebarOpen(false);
   };
 
   return (
     <header className="border-b border-border bg-white">
-      <div className="mx-auto flex w-full max-w-content items-center justify-between gap-4 px-4 py-4 md:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-content items-center justify-between gap-4 px-4 md:px-8">
         <Link
           className="font-heading text-2xl uppercase tracking-wide text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
           onClick={closeMobileMenu}

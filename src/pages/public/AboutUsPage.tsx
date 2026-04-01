@@ -3,11 +3,11 @@
  * @description Custom public about page aligned to the supplied marketing design.
  * @module src/pages/public/AboutUsPage
  */
-import { MarketingButton, MarketingFooter, MarketingHeader, marketingShellClassName } from '@/components/layout';
+import { MarketingButton, MarketingHeader, marketingShellClassName } from '@/components/layout';
 import { ROUTES, SERVICE_ROUTE_MAP } from '@/constants';
 import { ABOUT_COPY, COMMON_COPY } from '@/copy';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
-import { MarketingCtaSection } from '@/components/sections';
+import { MarketingBottomSection } from '@/components/sections';
 import { PageSEO } from '@/seo/PageSEO';
 import { SEO_META } from '@/seo/seo.constants';
 
@@ -125,8 +125,8 @@ const AboutUsPage = () => {
           />
           <div className="absolute inset-0 bg-[#09131d]/72" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#09131d]/95 via-[#09131d]/68 to-[#09131d]/35" />
-          <div className={`relative z-10 min-h-[35rem] ${shellClassName} lg:min-h-[40.5rem]`}>
-            <MarketingHeader contactHref="#about-cta" />
+          <div className={`relative z-10 min-h-[30rem] ${shellClassName} lg:h-[760px]`}>
+            <MarketingHeader contactHref={ROUTES.CONTACT} />
             <div className="grid gap-12 pb-14 pt-14 md:pb-24 md:pt-20 lg:grid-cols-[23rem_minmax(0,1fr)] lg:items-end lg:pb-16 lg:pt-28">
               <div className="max-w-[24rem] space-y-8 lg:space-y-24">
                 <div className="space-y-2">
@@ -260,17 +260,13 @@ const AboutUsPage = () => {
           </div>
         </section>
 
-        <MarketingCtaSection
+        <MarketingBottomSection
           body={ABOUT_COPY.ctaBody}
-          childImageAlt="Child holding a football"
-          childImageSrc="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80"
           id="about-cta"
-          imageAlt={COMMON_COPY.ctaBanner.imageAlt}
-          imageSrc={COMMON_COPY.ctaBanner.imageSrc}
+          imageAlt="Child holding a football"
+          imageSrc="/assets/policy-cta-boy.png"
           title={COMMON_COPY.ctaBanner.title}
         />
-
-        <MarketingFooter contactHref="#about-cta" />
       </main>
     </>
   );

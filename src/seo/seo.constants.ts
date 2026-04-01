@@ -23,6 +23,11 @@ export const SEO_META = {
     description:
       'Review the policy principles that guide safeguarding, behaviour, attendance, and communication across DDivine services.',
   },
+  contact: {
+    title: 'Contact Us',
+    description:
+      'Get in touch with DDivine Training for school partnerships, parent enquiries, and support questions.',
+  },
   events: {
     title: 'Upcoming Events',
     description:

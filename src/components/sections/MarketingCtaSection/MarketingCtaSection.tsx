@@ -45,7 +45,7 @@ export const MarketingCtaSection = ({
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <MarketingButton label="Learn more" to={ROUTES.SERVICES} />
-            <MarketingButton label="Contact us" to={ROUTES.SIGNUP} variant="outline-light" />
+            <MarketingButton label="Contact us" to={ROUTES.CONTACT} variant="outline-light" />
           </div>
         </div>
         <div className="relative h-full overflow-hidden lg:min-h-[25rem]">

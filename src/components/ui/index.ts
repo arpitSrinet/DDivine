@@ -12,6 +12,8 @@ export { Card } from './Card';
 export { ImageGallery } from './ImageGallery';
 export { Input } from './Input';
 export { Modal } from './Modal';
+export { RateLimitMessage } from './RateLimitMessage';
+export type { IRateLimitMessageProps } from './RateLimitMessage';
 export { Select } from './Select';
 export { Spinner } from './Spinner';
 export { Tooltip } from './Tooltip';

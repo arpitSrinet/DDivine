@@ -4,11 +4,16 @@
  * @module src/components/layout/DashboardLayout
  */
 import type { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '@/constants';
 import { COMMON_COPY } from '@/copy';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
+import { logger } from '@/monitoring';
+import { authService } from '@/services';
+import { useAuthStore } from '@/store';
+
+import { OfflineBanner } from './OfflineBanner';
 
 export interface IDashboardLayoutProps {
   children: ReactNode;
@@ -29,11 +34,27 @@ export const DashboardLayout = ({
   title,
 }: IDashboardLayoutProps) => {
   useScrollRestoration();
+  const navigate = useNavigate();
+  const clearAuth = useAuthStore((state) => state.clearAuth);
+
+  const handleLogout = async () => {
+    try {
+      await authService.logout();
+    } catch (error) {
+      logger.warn('Logout request failed; clearing session locally', { error });
+    } finally {
+      clearAuth();
+      navigate(ROUTES.LOGIN, { replace: true });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-surface">
+      <div className="mx-auto w-full max-w-content px-4 pt-4 md:px-8">
+        <OfflineBanner />
+      </div>
       <div className="border-b border-border bg-white">
-        <div className="mx-auto flex w-full max-w-content items-center justify-between gap-4 px-4 py-4 md:px-8">
+        <div className="mx-auto flex h-16 w-full max-w-content items-center justify-between gap-4 px-4 md:px-8">
           <div>
             <p className="font-heading text-2xl uppercase tracking-wide text-primary">
               {COMMON_COPY.brandName}
@@ -42,9 +63,13 @@ export const DashboardLayout = ({
               {COMMON_COPY.layout.dashboardPanelBody}
             </p>
           </div>
-          <div className="rounded-full bg-primary px-4 py-2 font-body text-sm font-semibold text-white">
-            DD
-          </div>
+          <button
+            className="rounded-lg border border-border px-4 py-2 font-body text-sm font-semibold text-dark transition-colors duration-200 hover:bg-danger hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            onClick={() => { void handleLogout(); }}
+            type="button"
+          >
+            {COMMON_COPY.actions.logout}
+          </button>
         </div>
       </div>
       <div className="mx-auto grid w-full max-w-content gap-6 px-4 py-8 md:px-8 lg:grid-cols-[16rem_1fr]">

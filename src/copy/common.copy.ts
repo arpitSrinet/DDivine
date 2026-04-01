@@ -3,6 +3,18 @@
  * @description Shared application copy including navigation, actions, and layout shell text.
  * @module src/copy/common
  */
+const policiesBodyParagraph =
+  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.';
+
+const policiesContentsItems = [
+  'Lorem ipsum dolor sit amet consectetur adipiscing elit?',
+  'Lorem ipsum dolor sit amet consectetur adipiscing elit?',
+  'What lorem ipsum dolor sit amet consectetur adipiscing elit?',
+  'When and lorem ipsum dolor sit amet consectetur adipiscing elit??',
+  'Do we use lorem ipsum dolor sit amet consectetur adipiscing elit?',
+  'Lorem ipsum dolor sit amet consectetur adipiscing elit?',
+] as const;
+
 export const COMMON_COPY = {
   brandName: 'DDivine Training',
   navigation: {
@@ -17,8 +29,10 @@ export const COMMON_COPY = {
   actions: {
     learnMore: 'Learn more',
     enquire: 'Enquire',
+    contactUs: 'Contact us',
     signUp: 'Sign up',
     logIn: 'Log in',
+    logout: 'Log out',
     readMore: 'Read more',
     bookNow: "Book your child's place",
     tryAgain: 'Try again',
@@ -95,6 +109,8 @@ export const COMMON_COPY = {
     },
   },
   leagueTable: {
+    filterLabel: 'Filter by team',
+    allTeams: 'All teams',
     teamName: 'Team name',
     matchesPlayed: 'MP',
     wins: 'W',
@@ -113,28 +129,47 @@ export const COMMON_COPY = {
   policiesPage: {
     title: 'Our policies',
     description:
-      'Clear standards matter. These policy summaries show the practical values behind our safeguarding, attendance, conduct, and communication approach.',
-    imageSrc:
-      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80',
-    imageAlt: 'Coach standing with children before an organised activity',
-    highlights: [
+      'Access all official documentation, safeguarding protocols, and operational guidelines for our school sports and events platform. We are committed to transparency and safety for all participants.',
+    tabs: [
+      'Privacy policy',
+      'Ousted Registrations',
+      'Reports',
+      'Procedures',
+    ],
+    sections: [
       {
-        title: 'Safeguarding first',
-        body: 'Every programme is built around child welfare, clear supervision, and a calm response to concerns.',
+        title: 'Privacy Notice',
+        paragraphs: [
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+        ],
+        summaryTitle: 'Summary of Key Points',
+        summaryParagraphs: [
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+        ],
       },
       {
-        title: 'Behaviour expectations',
-        body: 'Sessions work best when expectations are visible, consistent, and explained in child-friendly language.',
-      },
-      {
-        title: 'Attendance and collection',
-        body: 'Reliable communication around timing helps children feel secure and helps families plan confidently.',
-      },
-      {
-        title: 'Inclusion and access',
-        body: 'We aim to make participation feel realistic and positive for as many children as possible.',
+        title: 'Privacy Notice',
+        paragraphs: [
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+        ],
+        summaryTitle: 'Summary of Key Points',
+        summaryParagraphs: [
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+          policiesBodyParagraph,
+        ],
       },
     ],
+    tableOfContents: {
+      title: 'Table of contents',
+      items: policiesContentsItems,
+    },
   },
   eventsPage: {
     title: 'Upcoming events',

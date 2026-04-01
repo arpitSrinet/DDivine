@@ -1,6 +1,6 @@
 /**
  * @file main.tsx
- * @description React entry point for the Phase 4 DDivine Training application shell.
+ * @description React entry point for the Phase 6 DDivine Training application shell.
  * @module src/main
  */
 import { QueryClientProvider } from '@tanstack/react-query';

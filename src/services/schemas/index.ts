@@ -13,6 +13,7 @@ export {
   UserRoleSchema,
 } from './auth.schema';
 export { BookingSchema, type IBooking } from './booking.schema';
+export { SessionSchema, type ISession } from './session.schema';
 export { collectionResponseSchema, paginatedResponseSchema, parseCollectionResponse, parseSingleResponse } from './common.schema';
 export { type ICaseStudy, CaseStudySchema, FAQGroupSchema, type IFAQGroup, type IFreeActivityGroup, FreeActivityGroupSchema } from './knowledge.schema';
 export { type ILeagueTableRow, LeagueTableRowSchema } from './league.schema';
